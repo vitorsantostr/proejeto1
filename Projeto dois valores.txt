@@ -1,0 +1,32 @@
+import time
+op=0
+n1=int(input('Digite o primeiro número: '))
+n2=int(input('Digite o segundo número: '))
+while op != 5:
+    print('''\033[34mOpções:
+    [1] SOMAR
+    [2] MULTIPLICAR
+    [3] MAIOR   
+    [4] NOVOS NÚMEROS
+    [5] SAIR DO PROGRAMA\033[m''')
+    op=int(input('>>>>>> Qual opção desejada ? '))
+    if op == 1:
+        print(f'A soma dos números é {n1} + {n2} = {n1+n2}')
+        print('='*30)
+    elif op == 2:
+        print(f'A multiplicação dos números {n1} x {n2} = {n1*n2}')
+        print('='*30)
+    elif op == 3:
+        maior=max(n1,n2)
+        menor=min(n1,n2)
+        print(f'O maior número é {maior} e o menor é {menor}')
+    elif op == 4:
+        print('---Digite os novos valores---')
+        n1=int(input('Primeiro número: '))
+        n2=int(input('Segundo número: '))
+    elif op == 5:
+        print('\033[31mFechando programa...\033[m')
+        time.sleep(2)
+        print('Volte sempre!')
+    else:
+        print('\033[31mOpção inválida. Tente novamente.\033[m')
